@@ -1,5 +1,4 @@
 const nodemailer = require("nodemailer")
-
 const Mailer = async(req,res)=>{
 
     const transporter = nodemailer.createTransport({
@@ -7,7 +6,7 @@ const Mailer = async(req,res)=>{
         host: "smtp.gmail.com",
         auth: {
             user: 'manjindersingh3890@gmail.com',
-            pass: 'whuptpguucxiphdi',
+            pass: process.env.PASSWORD
         },
         secure: true, 
     });
